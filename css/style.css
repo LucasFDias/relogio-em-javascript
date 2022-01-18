@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+.container-text{
+    width: 50%;
+}
+
+.container-relogio{
+    width: 50%;
+}
+.container-text{
+    color: white; 
+}
+.container-text hr{
+    width: 36%;
+}
+
+.relogio{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/clock.png);
+    background-size: cover;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255.255.255.0.05),
+                inset 0 -15px 15px rgba(255.255.255.0.05),
+                0 15px 15px rgba(0.0.0.0.05),
+                inset 0 15px 15px rgba(0.0.0.0.05);
+}
+
+.relogio:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.relogio .hora,
+.relogio .min,
+.relogio .seg{
+    position: absolute;
+
+}
+
+.relogio .hora, .hr{
+    width: 160px;
+    height: 160px;
+}
+
+.relogio .min, .mn{
+    width: 190px;
+    height: 190px;
+}
+
+.relogio .seg, .sg{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .mn, .sg{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6ps 0 0;
+}
+
+.mn:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: #ff105e;
+    z-index: 11;
+    border-radius: 6px 6ps 0 0;
+}
+
+.sg:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6ps 0 0;
+}
